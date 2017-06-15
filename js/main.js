@@ -19,7 +19,8 @@ function start(){
   $.getJSON(api.url, function(topics) {
     topics.forEach(crearTopics)
   });
-  $(".btn-crear-tema").click(crearNuevoTema)
+  $(".btn-crear-tema").click(crearNuevoTema);
+  $(".btn-encuentra").click(encontrarTemas);
   $(".modal").modal();
 }
 
@@ -37,4 +38,10 @@ function crearNuevoTema(topic){
     content: $("#textarea").val(),
   }),
   crearTopics(topic);
+}
+
+function encontrarTemas(){
+  $.getJSON(api.url, function(temas) {
+    temas.find($(".buscador").val());
+  });
 }
