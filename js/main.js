@@ -30,6 +30,10 @@ function crearTopics(topic){
   $container.append(plantillaTopicsNueva);
 }
 
-function crearNuevoTema(){
-  
+function crearNuevoTema(topic){
+  $.post(api.url, {
+    author_name: $("#authorName").val(),
+    content: $("#textarea").val(),
+  }),
+  crearTopics(topic);
 }
