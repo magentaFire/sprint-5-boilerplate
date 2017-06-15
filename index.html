@@ -16,31 +16,37 @@
 
     <main class="row themes-container">
       <div class="row">
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                 <i class="material-icons prefix">search</i>
-                 <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                 <label for="icon_prefix2">Qué buscas</label>
-                 <button type="button" name="button" class="btn">Encuentra!</button>
-               </div>
-             </div>
-           </form>
-         </div>
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="authorName" type="text" class="validate">
-              <label for="first_name">Por:</label>
-            </div>
-            <div class="input-field col s12">
-              <textarea id="textarea" class="materialize-textarea"></textarea>
-              <label for="textarea">Mensaje</label>
-            </div>
+               <i class="material-icons prefix">search</i>
+               <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+               <label for="icon_prefix2">Qué buscas</label>
+               <button type="button" name="button" class="btn">Encuentra!</button>
+               <a class="waves-effect waves-light btn" href="#modal1">Nuevo tema</a>
+             </div>
+           </div>
+         </form>
+       </div>
+
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="authorName" type="text" class="validate">
+                  <label for="first_name">Por:</label>
+                </div>
+                <div class="input-field col s12">
+                  <textarea id="textarea" class="materialize-textarea"></textarea>
+                  <label for="textarea">Mensaje</label>
+                </div>
+              </div>
+              <button type="submit" name="button" class="btn center btn-crear-tema">Crear tema</button>
+            </form>
           </div>
-          <button type="submit" name="button" class="btn center btn-crear-tema">Crear tema</button>
-        </form>
+        </div>
       </div>
 
     </main>

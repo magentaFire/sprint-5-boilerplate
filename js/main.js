@@ -20,6 +20,7 @@ function start(){
     topics.forEach(crearTopics)
   });
   $(".btn-crear-tema").click(crearNuevoTema)
+  $(".modal").modal();
 }
 
 function crearTopics(topic){
