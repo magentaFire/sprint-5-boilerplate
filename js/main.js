@@ -42,7 +42,7 @@ function crearNuevoTema(topic){
 
 function encontrarTemas(){
   $.getJSON(api.url, function(temas) {
-    temas.forEach(posteaFiltrados);
+    temas.filter(posteaFiltrados);
   });
 }
 
