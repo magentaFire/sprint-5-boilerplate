@@ -42,6 +42,13 @@ function crearNuevoTema(topic){
 
 function encontrarTemas(){
   $.getJSON(api.url, function(temas) {
-    temas.find($(".buscador").val());
+    temas.forEach(posteaFiltrados);
   });
+}
+
+function posteaFiltrados(tema){
+  var $queBuscas = $(".buscador").val();
+  if (tema.content == $queBuscas || tema.author_name == $queBuscas){
+    console.log("found!!!");
+  };
 }
